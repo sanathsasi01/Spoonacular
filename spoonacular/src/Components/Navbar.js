@@ -1,11 +1,14 @@
 import css from './Navbar.module.css'
 import {useState} from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     function openMenu() {
+        setIsOpen(!isOpen)
+    }
+    function closeNav() {
         setIsOpen(!isOpen)
     }
     return (
@@ -19,9 +22,8 @@ function Navbar() {
                         <p>Mallu Chef</p>
                     </a>
                 </div>
-                <a href="http://localhost:3000/" className={css.li} style={isOpen ? {'display': 'block'} : null}>Contacts</a>
-                <a href='http://localhost:3000/' className={css.li} style={isOpen ? {'display':'block'} : null}>About</a>
-                <a href='http://localhost:3000/'  className={css.li} style={isOpen ? {'display':'block'} : null}>Home</a>
+                <Link to='/about' href='http://localhost:3000/' onClick={closeNav} className={css.li} style={isOpen ? {'display':'block'} : null}>About</Link>
+                <Link to='/' href='http://localhost:3000/' onClick={closeNav} className={css.li} style={isOpen ? {'display':'block'} : null}>Home</Link>
             </div>
         </ul>
     )

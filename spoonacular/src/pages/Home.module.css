@@ -1,0 +1,26 @@
+.FilterBtn {
+    background-color: #F6F6F6;
+    /* background-color: grey; */
+    padding: 3%;
+    color: rgba(46, 44, 44, 0.904);
+    /* margin: 1%; */
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+#filter-icon {
+    /* color: rgba(46, 44, 44, 0.904); */
+    color: red;
+    margin: 0 10%;
+}
+
+/* .FilterBtn:hover {
+    cursor: pointer;
+    background-color: rgb(153, 150, 150);
+} */
+
+@media screen and (min-width: 550px) {
+    .FilterBtn {
+        display: none;
+    }
+}
